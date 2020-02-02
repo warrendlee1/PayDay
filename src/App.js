@@ -13,7 +13,6 @@ import Form from "./pages/Form";
 import MainPage from "./pages";
 import NotFoundPage from "./pages/404";
 import UserPage from "./pages/users";
-// import Form from "./Users/minaghanna/Desktop/PayDay/src/pages/Form.js"
 
 function App() {
   return (
