@@ -19,9 +19,15 @@ addExpense = (e) => {
       expenses: [...prevState.expenses, {amount:"", type:""}],
     }));
   }
-deleteExpense = (e) => {
-  alert("DELETE")
-
+deleteExpense = (idx) => {
+  console.log('deleteExpense', idx);
+  console.log('current state', this.state.expenses);
+    this.setState({
+      expenses: this.state.expenses.splice(idx)
+    })
+//   this.setState(prevState => ({
+//   expenses: prevState.data.filter(item => prevState.expenses !== this.state.expenses)
+// }));
 }
 
 handleSubmit = (e) => { e.preventDefault() }
@@ -66,7 +72,7 @@ render() {
                   <option value="Emergency">Emergency</option>
                 </select><br></br>
                 <button onClick={this.addExpense}>Add another expense</button>
-                <button onClick={this.deleteExpense}>Delete</button>
+                <button onClick={(event) => this.deleteExpense(idx)}>Delete</button>
                 <p></p>
               </div>
             )
