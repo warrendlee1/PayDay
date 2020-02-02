@@ -1,2 +1,4 @@
-.gitignore
-node_modules
+node_modules/
+Chart.js-2.9.3/
+package-lock.json
+package.json
